@@ -14,5 +14,10 @@ CHIP Or {
     OUT out;
 
     PARTS:
-    // Put your code here:
+    // De Mogan Formula NOT(NOT(x) AND NOT(y))
+        Not(in=a, out=aOut);
+        Not(in=b, out=bOut);
+        And(a=aOut, b=bOut, out=andOut);
+        Not(in=andOut, out=out);
+
 }
